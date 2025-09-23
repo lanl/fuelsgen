@@ -6,4 +6,7 @@
 *.csv
 *.tif
 .DS_Store
-
+examples
+point-process
+NN-LGCP
+fuels paper
