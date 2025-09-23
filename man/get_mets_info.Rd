@@ -5,7 +5,10 @@
 \title{Metrics info}
 \usage{
 get_mets_info(
+  dimX,
+  dimY,
   ncc = T,
+  nclust = T,
   nholes = T,
   grid.area = T,
   moran = F,
@@ -14,7 +17,12 @@ get_mets_info(
   queen = T,
   perim = F,
   transect = F,
-  n.trans = 0
+  n.trans = 0,
+  Kinhom = F,
+  pcf = F,
+  Ginhom = F,
+  En = F,
+  Vn = F
 )
 }
 \arguments{

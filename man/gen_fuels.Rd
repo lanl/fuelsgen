@@ -8,20 +8,25 @@ gen_fuels(
   dimX,
   dimY,
   density,
+  dispersion = 1,
   radius,
   sd_radius,
   height = NULL,
   sd_height = 0,
   heterogeneity,
   heterogeneity.scale = 1,
-  sp.cov.locs = NULL,
-  sp.cov.vals = NULL,
-  sp.cov.scale = NULL,
+  X.locs = NULL,
+  X.vals = NULL,
+  Beta = 0,
   reps = 1,
-  GP.init.size = 1000,
+  GP.init.size = 32,
   seed = NULL,
-  I.transform = "logistic",
+  I.transform = "exp",
   logis.scale = 0.217622,
+  repulsion = F,
+  repulsion.eps = 0.001,
+  repulsion.B = 1/2,
+  repulsion.boundary = "periodic",
   parallel = F,
   verbose = T
 )
@@ -31,7 +36,7 @@ gen_fuels(
 
 \item{dimY}{(0,Inf): The size of the domain in X direction (meters)}
 
-\item{density}{(0,Inf): The mean number of fuels items per unit area (square meter)}
+\item{density}{(0,Inf): The mean number of fuels items}
 
 \item{radius}{(0,Inf): The Average radius of a circular fuel element}
 

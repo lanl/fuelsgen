@@ -4,7 +4,17 @@
 \alias{plot.fuelsgen}
 \title{Plot fuel layouts}
 \usage{
-\method{plot}{fuelsgen}(data)
+\method{plot}{fuelsgen}(
+  data,
+  axis = F,
+  circles = T,
+  text.size = 15,
+  point_size = 1,
+  which = NULL,
+  plot.dim = NULL,
+  obs = NULL,
+  fill = "forestgreen"
+)
 }
 \arguments{
 \item{data:}{fuels data object returned from gen_fuels}

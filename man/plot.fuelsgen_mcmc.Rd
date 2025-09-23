@@ -4,9 +4,14 @@
 \alias{plot.fuelsgen_mcmc}
 \title{Diagnostic plots for mcmc calibration}
 \usage{
-\method{plot}{fuelsgen_mcmc}(mcmc, burn = 0, type = "trace")
-
-\method{plot}{fuelsgen_mcmc}(mcmc, burn = 0, type = "trace")
+\method{plot}{fuelsgen_mcmc}(
+  mcmc,
+  burn = 0,
+  type = "trace",
+  plot_prior = F,
+  plot_llh = F,
+  truth = NULL
+)
 }
 \arguments{
 \item{mcmc:}{fuelsgen_mcmc object from fuelsgen::mcmc_MH_adaptive()}
@@ -16,7 +21,5 @@
 \item{type:}{'trace' or 'density'. 'trace' gives trace plots for the parameters, while 'density' plots the KDE and prior over the prior range}
 }
 \description{
-Plot a fuelsgen_mcmc object
-
 Plot a fuelsgen_mcmc object
 }

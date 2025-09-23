@@ -12,17 +12,20 @@ mcmc_MH_adaptive(
   n.samples = 10000,
   n.burn = 1000,
   adapt.par = c(100, 20, 0.5, 0.75),
-  prop.sigma = 0.1^2 * prior$theta_est * diag(length(prior$theta_est)),
+  prop.sigma = diag(0.1^2 * prior$theta_est),
   GP.init.size = 32,
-  I.transform = "logistic",
+  I.transform = "exp",
   gen_reps = 25,
-  avg = "llh",
+  ABC = F,
+  ABC_eps = 15,
+  ABC_wt = c(1, 0.1),
   gen_parallel = F,
   mets_parallel = T,
   load.theta = 0,
   make.cluster = T,
   parallel = T,
-  verbose = T
+  verbose = T,
+  fixed = NULL
 )
 }
 \arguments{

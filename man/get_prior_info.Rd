@@ -8,12 +8,17 @@ get_prior_info(
   fuel,
   metrics,
   est_cov_obs = T,
+  sigma_diag = F,
   est_cov_samples = 25,
   est_cov_reps = 25,
   est_rho_prior = list(prior = "gamma", params = c(1, 10/fuel$dimX)),
+  mu_mean = 1.5,
+  mu_sd = 0.5,
   gen_parallel = F,
   mets_parallel = T,
   make.cluster = F,
+  eps = F,
+  I.transform = "logistic",
   GP.init.size = 64,
   seed = NULL
 )

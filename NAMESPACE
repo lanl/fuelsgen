@@ -2,6 +2,7 @@
 
 S3method(plot,fuelsgen)
 S3method(plot,fuelsgen_mcmc)
+S3method(plot,fuelsgen_prior)
 export(contour_pairs)
 export(gen_fuels)
 export(get_mets)
@@ -9,3 +10,4 @@ export(get_mets_info)
 export(get_prior_info)
 export(mcmc_MH_adaptive)
 export(modify_raster)
+export(scatter_pairs)
