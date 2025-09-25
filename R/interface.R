@@ -7,6 +7,7 @@
 #' @param dimX (0,Inf): The size of the domain in X direction (meters)
 #' @param dimY (0,Inf): The size of the domain in X direction (meters)
 #' @param density (0,Inf): The mean number of fuels items
+#' @param dispersion (0,Inf): Dispersion parameter for mean-parameterized CMP. dispersion>1 => underdispersion. dispersion<1 => overdispersion. dispersion=1 => poisson
 #' @param radius (0,Inf): The Average radius of a circular fuel element
 #' @param sd_radius (0,Inf): The standard deviation of fuel element radii 
 #' @param height (0,Inf): The Average height of a fuel element. Default is NULL indicating we should not sample heights.

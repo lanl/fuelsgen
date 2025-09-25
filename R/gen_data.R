@@ -134,7 +134,8 @@ gen_data = function(theta, dimX, dimY, heterogeneity.scale = 1,
   # sample number of points
   if(dispersion != 1){
     # mean parameterized CMP
-    n_plus = mpcmp::rcomp(reps,mu = lambda*dimX*dimY, nu = dispersion)
+    # n_plus = mpcmp::rcomp(reps,mu = lambda*dimX*dimY, nu = dispersion)
+    n_plus = my_rcomp(n = reps, mu=lambda*dimX*dimY, nu=dispersion)
   } else{
     # regular poisson
     n_plus = rpois(reps, lambda*dimX*dimY)

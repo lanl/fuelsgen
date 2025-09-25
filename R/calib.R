@@ -1127,7 +1127,7 @@ get_mets_info = function(dimX,dimY,
                          grid.area=T,moran=F,geary=T,rook=F,queen=T,
                          perim=F,transect=F,n.trans=0,
                          Kinhom=F,pcf=F,Ginhom=F,
-                         En=F,Vn=F)
+                         En=T,Vn=T)
 {
   names = c()
   if(ncc){

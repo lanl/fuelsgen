@@ -163,6 +163,7 @@ scatter_pairs <- function(theta.list, prior, truth = NULL,
                           rho.bw = "nrd0", mu.bw = "nrd0", var.bw = "nrd0",
                           lambda.bw = "nrd0", nu.bw = "nrd0",
                           labels = c('posterior'),
+                          xrange = 'prior',
                           pt.max = 3000,       # max points per chain per panel
                           pt.alpha = 0.25,     # point transparency
                           pt.cex = 0.4,        # point size
@@ -199,6 +200,13 @@ scatter_pairs <- function(theta.list, prior, truth = NULL,
   par_names <- c("rho","mu","s2","lambda","nu")
   priors    <- list(rho.prior, mu.prior, var.prior, lam.prior, nu.prior)
   bw_list   <- list(rho.bw,    mu.bw,    var.bw,    lambda.bw,  nu.bw)
+  
+  # set bounds based on posterior if we ask for that
+  if(xrange=='posterior'){
+    for(i in 1:length(priors)){
+      priors[[i]]$bounds = range(theta.list[[1]][,i])
+    }
+  }
   
   get_col <- function(mat, j) mat[, j]
   
